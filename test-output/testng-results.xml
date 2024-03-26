@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Google]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-03-25T06:36:33Z" name="AutomationSuite" finished-at="2024-03-25T06:36:45Z" duration-ms="12677">
+    <groups>
+    </groups>
+    <test started-at="2024-03-25T06:36:33Z" name="RegressionTestOnChrome" finished-at="2024-03-25T06:36:45Z" duration-ms="12677">
+      <class name="script.DemoTest">
+        <test-method is-config="true" signature="initReport()[pri:0, instance:script.DemoTest@1356d4d4]" started-at="2024-03-25T12:06:32Z" name="initReport" finished-at="2024-03-25T12:06:33Z" duration-ms="791" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initReport -->
+        <test-method is-config="true" signature="preCondition(java.lang.reflect.Method, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:script.DemoTest@1356d4d4]" started-at="2024-03-25T12:06:33Z" name="preCondition" finished-at="2024-03-25T12:06:43Z" duration-ms="9949" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void script.DemoTest.testValidLogin()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://oauth-sandhya.sanjali-54dac:c085bba3-3591-4811-93ef-e0a936592b95@ondemand.eu-central-1.saucelabs.com:443/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method signature="testValidLogin()[pri:0, instance:script.DemoTest@1356d4d4]" started-at="2024-03-25T12:06:43Z" name="testValidLogin" finished-at="2024-03-25T12:06:43Z" duration-ms="306" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Google]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.DemoTest@1356d4d4]" started-at="2024-03-25T12:06:43Z" name="postCondition" finished-at="2024-03-25T12:06:45Z" duration-ms="2380" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=DemoTest.testValidLogin()[pri:0, instance:script.DemoTest@1356d4d4] output=Google]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method is-config="true" signature="publishReport()[pri:0, instance:script.DemoTest@1356d4d4]" started-at="2024-03-25T12:06:46Z" name="publishReport" finished-at="2024-03-25T12:06:47Z" duration-ms="1147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- publishReport -->
+      </class> <!-- script.DemoTest -->
+    </test> <!-- RegressionTestOnChrome -->
+  </suite> <!-- AutomationSuite -->
+</testng-results>
