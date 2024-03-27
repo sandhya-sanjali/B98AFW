@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [AutomationSuite]">
-  <parameter name="grid" value="yes"/>
+  <parameter name="grid" value="no"/>
   <parameter name="browser" value="chrome"/>
   <parameter name="gridURL" value="https://oauth-sandhya.sanjali-54dac:c085bba3-3591-4811-93ef-e0a936592b95@ondemand.eu-central-1.saucelabs.com:443/wd/hub"/>
   <test name="RegressionTestOnChrome">
-    <parameter name="grid" value="yes"/>
+    <parameter name="grid" value="no"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="gridURL" value="https://oauth-sandhya.sanjali-54dac:c085bba3-3591-4811-93ef-e0a936592b95@ondemand.eu-central-1.saucelabs.com:443/wd/hub"/>
     <packages>
       <package name="script"/>
     </packages>
     <classes>
-      <class name="script.DemoTest"/>
-      <class name="script.DemoTest2"/>
+      <class name="script.InvalidLogin"/>
+      <class name="script.ValidLogin"/>
     </classes>
   </test> <!-- RegressionTestOnChrome -->
 </suite> <!-- Failed suite [AutomationSuite] -->

@@ -3,7 +3,10 @@ package generic;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class Utility {
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+public abstract class Utility {
 
 	public static String getProperty(String path,String key)
 	{
@@ -22,4 +25,22 @@ public class Utility {
 		
 		return v;
 	}
+	
+	public static String getExcelData(String path,String sheet,int r,int c)
+	{
+		String v="";
+		try 
+		{
+			Workbook wb = WorkbookFactory.create(new FileInputStream(path));
+			v=wb.getSheet(sheet).getRow(r).getCell(c).toString();
+		}
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		
+		return v;
+	}
+	
+	//count rows, count columns, write data
 }

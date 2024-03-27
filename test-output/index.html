@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-AutomationSuite" class="navigator-link ">
-                    <span>C:\Users\Sandhya\OneDrive\Desktop\Bhanu Sir Class\Selenium wrokspace\B98AFW\testng.xml</span>
+                    <span>C:\Users\Sandhya\git\B98AFW\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-AutomationSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AutomationSuite" title="script.DemoTest" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-AutomationSuite" title="script.InvalidLogin" class="method navigator-link" hash-for-method="testInvalidLogin">testInvalidLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationSuite" title="script.ValidLogin" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-AutomationSuite -->
@@ -120,7 +125,22 @@
           <div class="suite-AutomationSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">script.DemoTest</span>
+              <span class="class-name">script.InvalidLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInvalidLogin">
+                  </a> <!-- testInvalidLogin -->
+                  <span class="method-name">testInvalidLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AutomationSuite-class-passed -->
+          <div class="suite-AutomationSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">script.ValidLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -135,7 +155,7 @@
         </div> <!-- panel AutomationSuite -->
         <div panel-name="test-xml-AutomationSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sandhya\OneDrive\Desktop\Bhanu Sir Class\Selenium wrokspace\B98AFW\testng.xml</span>
+            <span class="header-content">C:\Users\Sandhya\git\B98AFW\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,15 +163,15 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;AutomationSuite&quot;&gt;
   &lt;test name=&quot;RegressionTestOnChrome&quot;&gt;
-    &lt;parameter name=&quot;grid&quot; value=&quot;yes&quot;/&gt;
+    &lt;parameter name=&quot;grid&quot; value=&quot;no&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;gridURL&quot; value=&quot;https://oauth-sandhya.sanjali-54dac:c085bba3-3591-4811-93ef-e0a936592b95@ondemand.eu-central-1.saucelabs.com:443/wd/hub&quot;/&gt;
     &lt;packages&gt;
       &lt;package name=&quot;script&quot;/&gt;
     &lt;/packages&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;script.DemoTest&quot;/&gt;
-      &lt;class name=&quot;script.DemoTest2&quot;/&gt;
+      &lt;class name=&quot;script.InvalidLogin&quot;/&gt;
+      &lt;class name=&quot;script.ValidLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTestOnChrome --&gt;
 &lt;/suite&gt; &lt;!-- AutomationSuite --&gt;
@@ -191,16 +211,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testValidLogin')
-data.setCell(0, 2, 'script.DemoTest')
-data.setCell(0, 3, 306);
+data.setCell(0, 1, 'testInvalidLogin')
+data.setCell(0, 2, 'script.InvalidLogin')
+data.setCell(0, 3, 4146);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testValidLogin')
+data.setCell(1, 2, 'script.ValidLogin')
+data.setCell(1, 3, 2913);
 window.suiteTableData['AutomationSuite']= { tableData: data, tableDiv: 'times-div-AutomationSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 306 ms</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-AutomationSuite">
               </div> <!-- times-div-AutomationSuite -->
             </div> <!-- times-div -->
@@ -212,24 +236,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
+              <span class="reporter-method-name">testInvalidLogin</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">ErrMsg is Displayed:Invalid username and/or password.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
               <span class="reporter-method-name">testValidLogin</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Google</span>
+                <span class="reporter-method-output">HomePage is Displayed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-AutomationSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">script.DemoTest2</span>
+              <span class="ignored-class-name">script.ValidLogin</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">initReport</span>
-                <br/>
-                <span class="ignored-method-name">testInvalidLogin</span>
                 <br/>
                 <span class="ignored-method-name">publishReport</span>
                 <br/>
@@ -243,26 +271,44 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">script.DemoTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">script.InvalidLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">initReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">preCondition(public void script.DemoTest.testValidLogin(), chrome, yes, https://oauth-sandhya.sanjali-54dac:c085b...)</span>
-                <span class="method-start">820 ms</span>
+                <span class="method-name">preCondition(public void script.InvalidLogin.testInvalidLogin(), chrome, no, https://oauth-sandhya.sanjali-54dac:...)</span>
+                <span class="method-start">784 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testInvalidLogin</span>
+                <span class="method-start">8642 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">postCondition([TestResult name=testInvalidLogin status=SUCCESS method=InvalidLogin.testInvalidLogin()[pri:2, insta...)</span>
+                <span class="method-start">12791 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">script.ValidLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">preCondition(public void script.ValidLogin.testValidLogin(), chrome, no, https://oauth-sandhya.sanjali-54dac:c085...)</span>
+                <span class="method-start">15247 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testValidLogin</span>
-                <span class="method-start">10769 ms</span>
+                <span class="method-start">20663 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">postCondition([TestResult name=testValidLogin status=SUCCESS method=DemoTest.testValidLogin()[pri:0, instance:scri...)</span>
-                <span class="method-start">11081 ms</span>
+                <span class="method-name">postCondition([TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin()[pri:1, instance:sc...)</span>
+                <span class="method-start">23580 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">script.InvalidLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">publishReport</span>
-                <span class="method-start">13594 ms</span>
+                <span class="method-start">26052 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

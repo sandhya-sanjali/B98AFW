@@ -23,26 +23,21 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-public class BaseTest 
+public abstract class BaseTest implements IAutoConst
 {
 	public WebDriver driver;
 	public WebDriverWait wait;
-	public String config_path="./config.properties";
-	public static ExtentReports extent;
 	public ExtentTest test;
-	public static final String BROWSER="CHROME";
-	public static final String GRID="NO";
-	public static final String GRID_URL="http://localhost:4444";
+
 	
 	@BeforeSuite
 	public void initReport()
 	{
-		extent=new ExtentReports();
+
 		ExtentSparkReporter spark=new ExtentSparkReporter("./target/spark.html");
 		extent.attachReporter(spark);
 	}
@@ -55,21 +50,22 @@ public class BaseTest
 	
 	@Parameters({"browser","grid","gridURL"})
 	@BeforeMethod
-	public void preCondition(Method method,@Optional(BROWSER) String browser,@Optional(GRID) String grid,@Optional(GRID_URL) String gridURL) throws Exception
+	public void preCondition(Method method,@Optional(BROWSER) String browser
+			,@Optional(GRID) String grid,@Optional(GRID_URL) String gridURL) throws Exception
 	{
 		String testName = method.getName();
 		
 		test = extent.createTest(testName);
 		
-		String AppURL = Utility.getProperty(config_path, "APPURL");
+		String AppURL = Utility.getProperty(CONFIG_PATH, "APPURL");
 		test.info("APPURL:"+AppURL);
 		
-		String strITO = Utility.getProperty(config_path, "ITO");
+		String strITO = Utility.getProperty(CONFIG_PATH, "ITO");
 		long lngITO = Long.parseLong(strITO);
 		test.info("ITO:"+lngITO);
 		
 		
-		String strETO =  Utility.getProperty(config_path, "ETO");
+		String strETO =  Utility.getProperty(CONFIG_PATH, "ETO");
 		long lngETO= Long.parseLong(strETO);
 		test.info("ETO:"+lngETO);
 		
